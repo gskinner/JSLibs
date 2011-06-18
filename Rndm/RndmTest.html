@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Import EaselJS Framework -->
+<script src="Rndm.js"></script>
+<!-- End EaselJS Imports -->
+
+<script>
+
+function runTests(seed) {
+	out("Rndm.setSeed("+seed+");");
+	Rndm.setSeed(seed);
+	out("Rndm.getSeed() = "+Rndm.getSeed());
+	out("Rndm.random() = "+Rndm.random());
+	out("Rndm.float(100) = "+Rndm.float(100));
+	out("Rndm.float(5,10) = "+Rndm.float(5,10));
+	out("Rndm.boolean() = "+Rndm.boolean());
+	out("Rndm.boolean(0.2) = "+Rndm.boolean(0.2));
+	out("Rndm.sign() = "+Rndm.sign());
+	out("Rndm.sign(0.2) = "+Rndm.sign(0.2));
+	out("Rndm.bit() = "+Rndm.bit());
+	out("Rndm.bit(0.2) = "+Rndm.bit(0.2));
+	out("Rndm.integer(100) = "+Rndm.integer(100));
+	out("Rndm.integer(5,10) = "+Rndm.integer(5,10));
+	out("Rndm.shuffle([1,2,3,4,5]) = "+Rndm.shuffle([1,2,3,4,5]));
+	out("Rndm.item([1,2,3,4,5]) = "+Rndm.item([1,2,3,4,5]));
+}
+
+function out(str) {
+	document.write("<p>"+String(str)+"</p>");
+}
+
+
+</script>
+</head>
+	
+<body>
+	<b>The output values should always be the same with the same seed.</b>
+	<hr>
+	<script>runTests(20);</script>
+	<hr>
+	<script>runTests(0xFFFFFF);</script>
+</body>
+</html>

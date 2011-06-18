@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Import EaselJS Framework -->
+<script src="Rnd.js"></script>
+<!-- End EaselJS Imports -->
+
+<script>
+
+function runTests() {
+	out("Rnd.random() = "+Rnd.random());
+	out("Rnd.float(100) = "+Rnd.float(100));
+	out("Rnd.float(5,10) = "+Rnd.float(5,10));
+	out("Rnd.boolean() = "+Rnd.boolean());
+	out("Rnd.boolean(0.2) = "+Rnd.boolean(0.2));
+	out("Rnd.sign() = "+Rnd.sign());
+	out("Rnd.sign(0.2) = "+Rnd.sign(0.2));
+	out("Rnd.bit() = "+Rnd.bit());
+	out("Rnd.bit(0.2) = "+Rnd.bit(0.2));
+	out("Rnd.integer(100) = "+Rnd.integer(100));
+	out("Rnd.integer(5,10) = "+Rnd.integer(5,10));
+	out("Rnd.shuffle([1,2,3,4,5]) = "+Rnd.shuffle([1,2,3,4,5]));
+	out("Rnd.item([1,2,3,4,5]) = "+Rnd.item([1,2,3,4,5]));
+}
+
+function out(str) {
+	document.write("<p>"+String(str)+"</p>");
+}
+
+
+</script>
+</head>
+	
+<body>
+	<script>runTests();</script>
+</body>
+</html>
